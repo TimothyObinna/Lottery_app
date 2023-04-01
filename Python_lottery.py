@@ -1,12 +1,19 @@
 import random
 
-def Lucky_Winner():
+Winning_number = 30
+username = input("Enter your name to play: ")
+print("Hello", username, "welcome to cohort 1 lucky lottery.")
+
+def Lottery_app():
     while 1:
-        Username = input("Enter your Name, ")
-        Users_Number = int(input("Enter your Lottery Number, "))
-        Number = random.randint(0, 50)
-        if Number == 30:
-            print("Congratulations", Username,"! You  won")
+        usernumber = int(input("Enter any number from 0 to 50: "))
+        random_number = random.randint(0, 50)
+        if usernumber > 50:
+            print("Your input number is more than 50, sorry you are disqualified, try agin later.")
+            exit()
+        elif usernumber == Winning_number == random_number:
+            print("Congratulations", username,"! You  won")
         else:
-            print("Sorry!", Username, "you lost, please try again")
-Lucky_Winner()
+            print("Sorry!", username, "you lost, please try again")
+
+Lottery_app()
